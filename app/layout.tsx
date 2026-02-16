@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { VT323, Inter } from "next/font/google";
+import { VT323, Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 
 const vt323 = VT323({ 
@@ -11,6 +11,12 @@ const vt323 = VT323({
 const inter = Inter({ 
   subsets: ["latin"], 
   variable: "--font-inter"
+});
+
+const handwriting = Permanent_Marker({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-handwriting"
 });
 
 export const metadata: Metadata = {
@@ -25,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className={`${vt323.variable} ${inter.variable} antialiased`}>
+     <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased`}>
         {children}
       </body>
     </html>
