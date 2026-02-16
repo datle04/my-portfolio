@@ -1,27 +1,28 @@
-import Cassette from "@/components/Cassete";
-import Image from "next/image";
+import PlayerArea from "@/components/player-area";
+import TapeShelf from "@/components/tape-shelf";
+
 
 export default function Home() {
   return (
-    <div className="">
-      <button className="
-        bg-retro-primary 
-        text-retro-bg 
-        font-mono 
-        shadow-retro 
-        hover:translate-y-1 
-        hover:shadow-retro-hover 
-        transition-all
-      ">
-        START SYSTEM
-      </button>
-
-      <div className="bg-retro-surface border-2 border-retro-border p-4">
-        <div className="bg-retro-screen text-retro-accent font-mono p-2">
-          - READY...
+    <main className="min-h-screen bg-retro-bg p-4 md:p-8 flex items-center justify-center relative">
+      
+      {/* Container */}
+      <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
+        
+        <div className="lg:col-span-7 h-full">
+          <PlayerArea />
         </div>
+
+        <div className="lg:col-span-5 h-full">
+          <TapeShelf />
+        </div>
+        
       </div>
-      <Cassette id="1" title="Demo" color="bg-red-500"/>
-    </div>
+
+      {/* Footer */}
+      <div className="absolute bottom-2 text-retro-text/20 font-mono text-xs">
+        SYSTEM_ID: LE_TAN_DAT // V.2026.1
+      </div>
+    </main>
   );
 }

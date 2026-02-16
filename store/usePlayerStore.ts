@@ -1,11 +1,17 @@
 import { create } from 'zustand';
 
+export interface Project {
+  id: string;
+  title: string;
+  color: string; // Color of tape
+}
+
 interface PlayerState {
-  currentProject: string | null; // What project is being displayed?
+  currentProject: Project | null; // What project is being displayed?
   isPlaying: boolean;            
   
   // Actions
-  playProject: (projectId: string) => void; // Insert tape
+  playProject: (project: Project) => void; // Insert tape
   eject: () => void;                        // Eject tape
 }
 
@@ -15,8 +21,8 @@ export const usePlayerStore = create<PlayerState>((set) => ({
   isPlaying: false,
 
   // State management
-  playProject: (projectId) => set({ 
-    currentProject: projectId, 
+  playProject: (project) => set({ 
+    currentProject: project, 
     isPlaying: true 
   }),
 

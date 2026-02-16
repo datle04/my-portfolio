@@ -12,12 +12,10 @@
   --color-retro-border: #3f3f46;   /* Zinc-700: Viền khung */
 
   /* --- FONT CHỮ --- */
-  /* Lưu ý: Bạn cần setup font trong layout.tsx để biến --font-vt323 tồn tại */
   --font-mono: var(--font-vt323), monospace; 
   --font-sans: var(--font-inter), sans-serif;
 
   /* --- HIỆU ỨNG (SHADOW & ANIMATION) --- */
-  /* Shadow cứng tạo cảm giác 3D khối hộp */
   --shadow-retro: 4px 4px 0px 0px rgba(0, 0, 0, 0.5);
   --shadow-retro-hover: 2px 2px 0px 0px rgba(0, 0, 0, 0.5);
 
