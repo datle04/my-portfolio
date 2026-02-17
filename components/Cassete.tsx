@@ -14,6 +14,8 @@ export default function Cassette({ project }: Props) {
   const playGrab = useSound("/sounds/tape-grab.ogg", 1.0);
   const playInsert = useSound("/sounds/cassete-insert.ogg", 1.0);
 
+  const isProfile = project.id === "profile";
+
   const isMobile = useIsMobile();
 
   const handleTap = () => {
@@ -71,21 +73,19 @@ export default function Cassette({ project }: Props) {
           <div className="screw"></div>
           <div className="screw"></div>
           
-          <div className="label">
-            <div className="tape-header">
-                <span>A</span>
-                <span>NR [30]</span>
-            </div>
-
-            <div className="font-handwriting text-3xl font-bold text-black/80 truncate max-w-[90%] text-center">
-                {project.title}
-            </div>
-            
-            <div className="hole">
-                <div className="reel"></div>
-                <div className="window"></div>
-                <div className="reel"></div>
-            </div>
+          <div 
+            className="label relative overflow-hidden"
+            style={{
+              background: isProfile 
+                ? `repeating-linear-gradient(45deg, #fbbf24, #fbbf24 10px, #1a1a1a 10px, #1a1a1a 20px)`
+                : project.color 
+            }}
+          >
+              <div className={`relative z-10 ${isProfile ? "bg-black/80 px-3 py-1 border border-yellow-500 shadow-lg" : ""}`}>
+                  <div className={`font-handwriting text-4xl font-bold max-w-[80%] text-center ${isProfile ? "text-yellow-500" : "text-black/80"}`}>
+                      {project.title}
+                  </div>
+              </div>
           </div>
         </div>
       </div>

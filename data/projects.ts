@@ -67,7 +67,7 @@ export const projectsData: ProjectData[] = [
     images: fintrackGallery,
     links: {
       github: "https://github.com/datle04/fintrack-frontend",
-      demo: "https://fintrack-demo.vercel.app"
+      demo: "https://fintrack-frontend-pg3r.onrender.com/"
     },
     themeColor: "#A78BFA",
     color: "#A78BFA"

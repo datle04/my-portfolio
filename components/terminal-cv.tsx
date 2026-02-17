@@ -14,7 +14,6 @@ export default function TerminalCV() {
         <div className="grid grid-cols-2 gap-2 pl-4">
           <p>&gt; Frontend: <span className="text-white">Next.js, React, Tailwind, JavaScript, TypeScript</span></p>
           <p>&gt; Backend: <span className="text-white">Node.js, Express, MongoDB</span></p>
-          <p>&gt; Game: <span className="text-white">Cocos Creator</span></p>
           <p>&gt; Tools: <span className="text-white">Git, Figma, Postman, MongoDB Compass</span></p>
         </div>
       </div>
@@ -29,7 +28,7 @@ export default function TerminalCV() {
           <p className="font-bold text-white">TAKA SOLUTIONS</p>
           <ul className="list-disc ml-5 text-green-400/80 mt-1 space-y-1">
             <li>Developed UI/API for "EcoConnect" (Zalo Mini App).</li>
-            <li>Learn about ZMP SDK and write documents about EcoConnect</li>
+            <li>Learn about ZMP SDK and write documents for EcoConnect.</li>
           </ul>
         </div>
       </div>
