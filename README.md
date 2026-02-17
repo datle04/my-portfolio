@@ -2,7 +2,7 @@
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8?style=for-the-badge&logo=tailwindcss)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.0-38bdf8?style=for-the-badge&logo=tailwindcss)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-Latest-purple?style=for-the-badge&logo=framer)
 
 > **"Not just a portfolio, it's a time machine."**
@@ -28,7 +28,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Core:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Core:** [Next.js 16](https://nextjs.org/) (App Router)
 - **Language:** TypeScript
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Animation:** [Framer Motion](https://www.framer.com/motion/) (Complex gestures & physics)
