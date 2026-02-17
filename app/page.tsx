@@ -20,12 +20,10 @@ export default function Home() {
       </div>
 
       {/* CREDIT FOOTER */}
-      <div className="fixed bottom-2 z-50 text-[10px] text-retro-text/40 font-mono tracking-widest pointer-events-none select-none">
-        <span className="opacity-50">SYSTEM_ARCHITECT: LE_TAN_DAT</span>
-        <span className="mx-2">|</span>
-        <span>UI_MODULE: ALVARO_MONTORO</span>
-        <span className="mx-2">|</span>
-        <span>AUDIO_CORE: Kenney Assets (UI Audio)</span>
+      <div className="fixed bottom-2 w-full text-center pointer-events-none z-0">
+          <p className="text-[10px] font-mono text-white/20">
+              BUILT_BY_DAT_LE // ASSETS_BY_KENNEY_NL // CSS_BY_ALVARO // SOUND_BY_PIXABAY
+          </p>
       </div>
     </main>
   );
