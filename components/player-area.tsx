@@ -151,7 +151,7 @@ export default function PlayerArea() {
             className={`
                 font-bold font-mono rounded shadow-retro transition-all active:translate-y-1
                 ${isPlaying
-                    ? "bg-retro-primary text-retro-bg hover: translate-y-1 hover:shadow-retro-hover cursor-pointer"
+                    ? "bg-retro-primary text-retro-bg hover: translate-y-1 hover:shadow-retro-hover"
                     : "bg-retro-border text-retro-text/20 cursor-not-allowed shadow-none translate-y-1"
                 }
         `}>

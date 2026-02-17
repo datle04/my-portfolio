@@ -83,13 +83,13 @@ export default function RetroImageSlider({ images, alt }: Props) {
       {images.length > 1 && (
         <>
           <button
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-retro-surface/80 border border-retro-primary/50 text-retro-primary hover:bg-retro-primary hover:text-retro-bg transition-colors rounded-sm shadow-retro cursor-pointer"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-retro-surface/80 border border-retro-primary/50 text-retro-primary hover:bg-retro-primary hover:text-retro-bg transition-colors rounded-sm shadow-retro"
             onClick={() => paginate(-1)}
           >
             <ChevronLeft size={20} />
           </button>
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-retro-surface/80 border border-retro-primary/50 text-retro-primary hover:bg-retro-primary hover:text-retro-bg transition-colors rounded-sm shadow-retro cursor-pointer"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 p-2 bg-retro-surface/80 border border-retro-primary/50 text-retro-primary hover:bg-retro-primary hover:text-retro-bg transition-colors rounded-sm shadow-retro"
             onClick={() => paginate(1)}
           >
             <ChevronRight size={20} />
