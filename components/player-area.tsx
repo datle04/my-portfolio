@@ -44,7 +44,7 @@ export default function PlayerArea() {
     <section
         id="player-zone"
         className={`
-            bg-retro-surface border-2 border-retro-border rounded-xl p-6 h-full min-h-[500px] flex flex-col justify-between shadow-retro relative overflow-hidden
+            bg-retro-surface border-2 border-retro-border rounded-xl p-3 lg:p-6 h-full min-h-[500px] flex flex-col justify-between shadow-retro relative overflow-hidden
             ${isPlaying ? 'border-retro-primary shadow-[0_0_20px_rgba(249,115,22,0.3)]' : ''}
         `}
     >
@@ -98,7 +98,7 @@ export default function PlayerArea() {
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}  
                             exit={{ opacity: 0, y: -10, filter: "blur(10px)" }}  
                             transition={{ duration: 0.4, ease: "circOut" }}
-                            className="w-full h-full p-6"
+                            className="w-full h-full mt-2 lg:mt-0 lg:p-6"
                         >
                             {
                                 activeProjectData.id === 'profile' ?
