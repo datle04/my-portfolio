@@ -13,7 +13,7 @@ export default function IdentitySticker() {
 
         <div className="flex gap-2 mt-2">
             <a href="https://github.com/datle04" target="_blank" className="hover:text-retro-primary"><Github className='w-5 h-5' /></a>
-            <a href="#" className="hover:text-retro-primary"><Linkedin className='w-5 h-5'/></a>
+            <a href="www.linkedin.com/in/datle-85a4b3322" className="hover:text-retro-primary"><Linkedin className='w-5 h-5'/></a>
         </div>
       </div>
     </div>
