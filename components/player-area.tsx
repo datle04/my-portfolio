@@ -6,13 +6,39 @@ import { div } from "framer-motion/client";
 import ProjectScreen from "./project-screen";
 import IdentitySticker from "./identity-sticker";
 import TerminalCV from "./terminal-cv";
+import useSound from "@/lib/hooks/useSound";
+import { useEffect, useRef } from "react";
 
 export default function PlayerArea() {
 
-    const { currentProject, isPlaying, eject } = usePlayerStore();
+    const { currentProject, isPlaying, eject } = usePlayerStore();  
+    const activeProjectData = currentProject ? getProjectById(currentProject.id) : null;
 
-    // Lấy full data từ ID trong store
-  const activeProjectData = currentProject ? getProjectById(currentProject.id) : null;
+    const playEject = useSound('/sounds/cassete-eject.ogg');
+    const handleEject = () => {
+        playEject();
+        eject();     
+    };
+
+    const humRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        humRef.current = new Audio("/sounds/static.mp3"); 
+        humRef.current.loop = true; 
+        humRef.current.volume = 0.15;
+
+        return () => {
+            humRef.current?.pause();
+        };
+    }, []);
+
+    useEffect(() => {
+        if (isPlaying) {
+            humRef.current?.play().catch(() => {});
+        } else {
+            humRef.current?.pause();
+        }
+    }, [isPlaying]);
 
   return (
     <section
@@ -121,7 +147,7 @@ export default function PlayerArea() {
            // CONTROLS_LOCKED
         </div>
         <button 
-            onClick={eject}
+            onClick={handleEject}
             className={`
                 font-bold font-mono rounded shadow-retro transition-all active:translate-y-1
                 ${isPlaying

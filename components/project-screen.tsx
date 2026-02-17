@@ -4,12 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ProjectData } from "@/data/projects";
 import { Github, ExternalLink, Code2 } from "lucide-react"; 
 import RetroImageSlider from "./retro-image-slider";
+import useSound from "@/lib/hooks/useSound";
 
 interface Props {
   project: ProjectData;
 }
 
 export default function ProjectScreen({ project }: Props) {
+  const playClick = useSound("/sounds/plastic-click.ogg");
+
   return (
     <div className="w-full h-full flex flex-col font-mono text-retro-text relative z-10">
       
@@ -60,6 +63,7 @@ export default function ProjectScreen({ project }: Props) {
                 href={project.links.github} 
                 target="_blank" 
                 rel="noreferrer"
+                onClick={() => playClick()}
                 className="flex items-center gap-2 bg-retro-surface border border-retro-border hover:bg-retro-border px-3 py-2 text-xs transition-colors group"
               >
                 <Github size={14} className="group-hover:text-white" />
@@ -72,6 +76,7 @@ export default function ProjectScreen({ project }: Props) {
                 href={project.links.demo} 
                 target="_blank" 
                 rel="noreferrer"
+                onClick={() => playClick()}
                 className={`flex items-center gap-2 border border-retro-border px-3 py-2 text-xs transition-colors hover:bg-${project.themeColor.split('-')[1]}-500/20 text-${project.themeColor.split('-')[1]}-400`}
               >
                 <ExternalLink size={14} />
