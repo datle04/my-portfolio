@@ -1,8 +1,13 @@
+"use client";
 import { Project } from "@/store/usePlayerStore";
 import { projectsData } from "@/data/projects";
 import Cassette from "./cassete";
+import useIsMobile from "@/lib/hooks/useIsMobile";
 
 export default function TapeShelf() {
+
+  const isMobile = useIsMobile();
+
   return (
     <section className="flex flex-col h-full gap-4">
       <div className="bg-retro-surface/50 p-4 rounded-lg border border-retro-border/50 min-h-[500px]">
@@ -11,14 +16,14 @@ export default function TapeShelf() {
           <span>[{projectsData.length}]</span>
         </h3>
         
-        <div className="grid grid-cols-1 gap-6 p-2">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:grid-cols-1 lg:gap-6 p-2">
            {projectsData.map((project) => (
              <Cassette key={project.id} project={project} />
            ))}
         </div>
         
         <div className="mt-8 text-center text-xs font-mono text-retro-text/30 italic">
-           Drag & Drop cartridge to Player <br/> to initialize sequence.
+           {isMobile? "Tap" : "Drag & Drop"} a cartridge to Player <br/> to initialize sequence.
         </div>
       </div>
     </section>
