@@ -40,6 +40,7 @@ export default function TerminalCV() {
            <p className="text-white">Nguyen Tat Thanh University</p>
            <p className="text-green-400/80">Major: Information Technology</p>
            <p className="text-green-400/80">Graduated: 2026</p>
+           <p className="text-green-400/80">GPA: 3.4/4.0</p>
         </div>
       </div>
 
