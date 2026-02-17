@@ -41,7 +41,7 @@ If you want to run this project locally:
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/your-username/retro-portfolio.git](https://github.com/your-username/retro-portfolio.git)
+git clone [https://github.com/datle04/my-portfolio](https://github.com/datle04/my-portfolio.git)
 
 # 2. Navigate to project directory
 cd retro-portfolio
