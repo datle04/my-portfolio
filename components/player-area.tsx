@@ -53,9 +53,9 @@ export default function PlayerArea() {
       <div className="absolute bottom-2 left-2 w-3 h-3 rounded-full bg-retro-border/50"></div>
       <div className="absolute bottom-2 right-2 w-3 h-3 rounded-full bg-retro-border/50"></div>
 
-      <div className="flex justify-between items-center mb-4">
+      <div className="py-8 lg:py-0 flex justify-between items-center mb-4">
         <h2 className="font-mono text-retro-primary text-xl tracking-wider">SYSTEM_PLAYER_V1</h2>
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center">   
            <div 
                 className={`
                     w-3 h-3 rounded-full transition-colors

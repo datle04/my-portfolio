@@ -11,7 +11,7 @@ export default function TerminalCV() {
       {/* Skills */}
       <div className="mb-6">
         <h3 className="text-white bg-green-900/30 inline-block px-2 mb-2">1. SKILL_SET</h3>
-        <div className="grid grid-cols-2 gap-2 pl-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 pl-4">
           <p>&gt; Frontend: <span className="text-white">Next.js, React, Tailwind, JavaScript, TypeScript</span></p>
           <p>&gt; Backend: <span className="text-white">Node.js, Express, MongoDB</span></p>
           <p>&gt; Tools: <span className="text-white">Git, Figma, Postman, MongoDB Compass</span></p>

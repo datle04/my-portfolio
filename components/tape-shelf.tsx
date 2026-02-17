@@ -16,7 +16,7 @@ export default function TapeShelf() {
           <span>[{projectsData.length}]</span>
         </h3>
         
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 lg:grid-cols-1 lg:gap-6 p-2">
+        <div className="grid grid-cols-1 gap-6 p-2">
            {projectsData.map((project) => (
              <Cassette key={project.id} project={project} />
            ))}
