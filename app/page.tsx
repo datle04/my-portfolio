@@ -19,9 +19,13 @@ export default function Home() {
         
       </div>
 
-      {/* Footer */}
-      <div className="absolute bottom-2 text-retro-text/20 font-mono text-xs">
-        SYSTEM_ID: LE_TAN_DAT // V.2026.1
+      {/* CREDIT FOOTER */}
+      <div className="fixed bottom-2 z-50 text-[10px] text-retro-text/40 font-mono tracking-widest pointer-events-none select-none">
+        <span className="opacity-50">SYSTEM_ARCHITECT: LE_TAN_DAT</span>
+        <span className="mx-2">|</span>
+        <span>UI_MODULE: ALVARO_MONTORO</span>
+        <span className="mx-2">|</span>
+        <span>AUDIO_CORE: Kenney Assets (UI Audio)</span>
       </div>
     </main>
   );
