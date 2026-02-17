@@ -9,11 +9,11 @@ export default function Home() {
       {/* Container */}
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
         
-        <div className="lg:col-span-7 h-full">
+        <div className="lg:col-span-9 h-full">
           <PlayerArea />
         </div>
 
-        <div className="lg:col-span-5 h-full">
+        <div className="lg:col-span-3 h-full">
           <TapeShelf />
         </div>
         

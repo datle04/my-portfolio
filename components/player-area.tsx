@@ -1,10 +1,18 @@
 "use client"
+import { getProjectById } from "@/data/projects";
 import { usePlayerStore } from "@/store/usePlayerStore";
+import { AnimatePresence, motion } from "framer-motion";
 import { div } from "framer-motion/client";
+import ProjectScreen from "./project-screen";
+import IdentitySticker from "./identity-sticker";
+import TerminalCV from "./terminal-cv";
 
 export default function PlayerArea() {
 
     const { currentProject, isPlaying, eject } = usePlayerStore();
+
+    // Lấy full data từ ID trong store
+  const activeProjectData = currentProject ? getProjectById(currentProject.id) : null;
 
   return (
     <section
@@ -53,7 +61,48 @@ export default function PlayerArea() {
                 <p className="text-retro-text/50 text-xs mt-4 animate-pulse">
                     [ PROCESSING DATA... ]
                 </p>
-                {/* Images Gallery (will implement later) */}
+                {/* Images Gallery */}
+                <div className="flex-1 bg-retro-screen ... relative overflow-hidden">
+                    
+                    <AnimatePresence mode="wait">                      
+                        {isPlaying && activeProjectData ? (
+                        <motion.div
+                            key={activeProjectData.id} 
+                            initial={{ opacity: 0, y: 10, filter: "blur(10px)" }} 
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}  
+                            exit={{ opacity: 0, y: -10, filter: "blur(10px)" }}  
+                            transition={{ duration: 0.4, ease: "circOut" }}
+                            className="w-full h-full p-6"
+                        >
+                            {
+                                activeProjectData.id === 'profile' ?
+                                (
+                                    <TerminalCV />
+                                )
+                                :
+                                (
+                                    <ProjectScreen project={activeProjectData} />
+                                )
+                            }
+                        </motion.div>
+                        ) : (
+                        // Idle Screen
+                        <motion.div
+                            key="idle"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="h-full flex flex-col justify-center items-center"
+                        >
+                            <p className="animate-pulse text-retro-accent/50">&gt; SYSTEM READY...</p>
+                            <p className="text-retro-text/30 text-sm mt-2">INSERT CARTRIDGE</p>
+                        </motion.div>
+                        )}
+                    </AnimatePresence>
+                    
+                    {/* Scanline Effect */}
+                    <div className="absolute inset-0 ... pointer-events-none z-50"></div>
+                </div>
             </div>
             )
             : (
@@ -83,6 +132,7 @@ export default function PlayerArea() {
           EJECT
         </button>
     </div>
+    <IdentitySticker/>
     </section>
   );
 }
