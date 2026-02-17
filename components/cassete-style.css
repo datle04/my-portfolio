@@ -1,0 +1,128 @@
+.alvaro-tape {
+  --tape-base: #2e2e2e; 
+  --tape-label: #fca;   
+  --tape-text: #333;
+  
+  --tape-shadow: #0003;
+  --tape-light: #fff2;
+
+  position: relative;
+  width: 600px;  
+  height: 380px;
+  overflow: visible;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.alvaro-tape .tape-body {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: var(--tape-base);
+  color: var(--tape-base);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 0 20px -5px rgba(0,0,0,0.5),
+    0 10px 15px -5px rgba(0,0,0,0.5);
+}
+
+.alvaro-tape .face {
+  width: 90%;
+  height: 65%;
+  background: var(--tape-shadow);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px var(--tape-shadow);
+}
+
+.alvaro-tape .screw {
+  width: 15px;
+  height: 15px;
+  background: #111;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: inset 1px 1px 2px #555;
+}
+
+.alvaro-tape .screw::before {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 80%; height: 2px;
+  background: #333;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.alvaro-tape .screw:nth-child(1) { top: 10px; left: 10px; }
+.alvaro-tape .screw:nth-child(2) { top: 10px; right: 10px; }
+.alvaro-tape .screw:nth-child(3) { bottom: 10px; left: 10px; }
+.alvaro-tape .screw:nth-child(4) { bottom: 10px; right: 10px; }
+
+.alvaro-tape .label {
+  width: 85%;
+  height: 80%;
+  background: var(--tape-label);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.alvaro-tape .hole {
+    width: 60%;
+    height: 35%;
+    background: var(--tape-base);
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.alvaro-tape .window {
+    width: 30%;
+    height: 60%;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+.alvaro-tape .reel {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.alvaro-tape .reel::after, .alvaro-tape .reel::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+}
+.alvaro-tape .reel::after { width: 100%; height: 3px; }
+.alvaro-tape .reel::before { width: 3px; height: 100%; }
+
+.alvaro-tape .tape-header {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-family: monospace;
+    opacity: 0.6;
+    margin-bottom: 5px;
+}
