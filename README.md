@@ -1,4 +1,5 @@
 # 📼 Portfolio OS v1.0 | Retro Cassette Interface
+![Portfolio Demo](./public/demo.jpg)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
