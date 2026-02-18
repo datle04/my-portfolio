@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VT323, Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/custom-cursor";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const vt323 = VT323({ 
   weight: "400", 
@@ -33,6 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased`}>
+        <SpeedInsights/>
         <CustomCursor/>
         {children}
       </body>
