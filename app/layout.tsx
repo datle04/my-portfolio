@@ -34,9 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
      <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased`}>
-        <SpeedInsights/>
         <CustomCursor/>
         {children}
+        <SpeedInsights/>
       </body>
     </html>
   );
