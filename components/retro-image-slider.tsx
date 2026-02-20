@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image"; 
 import useSound from "@/lib/hooks/useSound";
 
 interface Props {
@@ -43,12 +43,14 @@ export default function RetroImageSlider({ images, alt }: Props) {
   };
 
   const getImageSource = (img: string | StaticImageData) => {
-    console.log(img);
     if (typeof img === 'string') {
       return img; 
     }
     return img.src;
   };
+
+  const currentSrc = getImageSource(images[imageIndex]);
+  const isGif = typeof currentSrc === 'string' && currentSrc.toLowerCase().includes('.gif');
 
   return (
     <div className="relative w-full h-full bg-black/40 border border-retro-border/50 rounded overflow-hidden group">
@@ -56,10 +58,8 @@ export default function RetroImageSlider({ images, alt }: Props) {
       {/* Image Gallery*/}
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         <AnimatePresence initial={false} custom={direction}>
-          <motion.img
-            key={page} // Trigger animation when key changes
-            src={getImageSource(images[imageIndex])}
-            alt={`${alt} - View ${imageIndex + 1}`}
+          <motion.div
+            key={page}
             custom={direction}
             variants={variants}
             initial="enter"
@@ -69,8 +69,16 @@ export default function RetroImageSlider({ images, alt }: Props) {
               x: { type: "spring", stiffness: 300, damping: 30 },
               opacity: { duration: 0.2 }
             }}
-            className="absolute w-full h-full object-contain" 
-          />
+            className="absolute w-full h-full flex items-center justify-center" 
+          >
+            <Image 
+              src={currentSrc}
+              alt={`${alt} - View ${imageIndex + 1}`}
+              fill
+              className="object-contain"
+              unoptimized={isGif} 
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Noise overlay */}

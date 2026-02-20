@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased`}>
+     <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased scrollbar-hide`}>
         <SpeedInsights/>
         <CustomCursor/>
         {children}

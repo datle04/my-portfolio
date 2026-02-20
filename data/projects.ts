@@ -16,6 +16,7 @@ import EcoUserProfile from "@/assets/EcoConnect Showcase/UserProfile.jpg"
 import JobLanding from "@/assets/JobTracker Showcase/Landing.jpg"
 import JobLogin from "@/assets/JobTracker Showcase/Login.jpg"
 import JobDashboard from "@/assets/JobTracker Showcase/Dashboard.jpg"
+import JumpyBirdGif from "@/assets/JumpyBird Showcase/JumpyBirdGif.gif"
 
 const fintrackGallery: StaticImageData[] = [
   Landing, Dashboard, Chatbot, Transactions, Budget, Goal, Stats, Setting
@@ -98,6 +99,19 @@ export const projectsData: ProjectData[] = [
     },
     themeColor: "#F472B6",
     color: "#F472B6"
+  },
+  {
+    id: "jumpybird",
+    title: "Jumpy Bird",
+    shortDesc: "A Flappy Bird clone Web game",
+    description: "Jumpy Bird is a clone of the famous game built with Cocos Creator to fulfill my passion for games.",
+    techStack: ["Cocos Creator, TypeScript"],
+    images: [JumpyBirdGif],
+    links: {
+      github: "https://github.com/datle04/jumpy-bird",
+    },
+    themeColor: "#a3e635",
+    color: "#a3e635"
   },
 ];
 

@@ -1,10 +1,24 @@
+"use client";
+import BootScreen from "@/components/boot-screen";
 import PlayerArea from "@/components/player-area";
 import TapeShelf from "@/components/tape-shelf";
+import useSound from "@/lib/hooks/useSound";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 
 export default function Home() {
+  const [isBooted, setIsBooted] = useState(false);
+  const beep = useSound("/sounds/boot.mp3")
+
   return (
-    <main className="min-h-screen bg-retro-bg p-4 md:p-8 flex items-center justify-center relative">
+    <main className="min-h-screen bg-retro-bg p-4 md:p-8 flex items-center justify-center relative scrollbar-hide">
+      <AnimatePresence mode="wait">
+        {!isBooted && <BootScreen onComplete={() => {
+            setIsBooted(true)
+            beep();
+        }} />}
+      </AnimatePresence>
       
       {/* Container */}
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 h-full">
