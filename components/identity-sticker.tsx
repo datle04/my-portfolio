@@ -7,7 +7,7 @@ export default function IdentitySticker() {
       
       <div className="bg-yellow-200 text-black px-4 py-3 rounded shadow-lg border border-yellow-400 font-handwriting text-sm leading-tight">
         <h3 className="font-bold text-lg border-b border-black/20 mb-1">Le Tan Dat</h3>
-        <p>Frontend Developer</p>
+        <p>Software Engineer</p>
         <p className="text-xs text-gray-600 mt-1">+84 70 794 3426</p>
         <p className="text-xs text-gray-600">ldat0909@gmail.com</p>
 
