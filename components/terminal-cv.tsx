@@ -24,6 +24,16 @@ export default function TerminalCV() {
         
         {/* Item 1 */}
         <div className="pl-4 mb-4 border-l border-green-500/30 ml-2">
+          <p className="text-yellow-400">2026.03 - Present</p>
+          <p className="font-bold text-white">WeGrowth</p>
+          <ul className="list-disc ml-5 text-green-400/80 mt-1 space-y-1">
+            <li>Build and maintain high-performance websites, ensuring every pixel matches the original design intent.</li>
+            <li>Develop and implement AI connectors to automate internal and client-facing processes.</li>
+          </ul>
+        </div>
+        
+        {/* Item 1 */}
+        <div className="pl-4 mb-4 border-l border-green-500/30 ml-2">
           <p className="text-yellow-400">2025.10 - 2025.12 [INTERNSHIP]</p>
           <p className="font-bold text-white">TAKA SOLUTIONS</p>
           <ul className="list-disc ml-5 text-green-400/80 mt-1 space-y-1">
