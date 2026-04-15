@@ -31,7 +31,8 @@ export default function Cassette({ project }: Props) {
   };
 
   return (
-    <motion.div // Container
+    // Container
+    <motion.div 
       className="relative w-[210px] h-[133px] mx-auto cursor-grab active:cursor-grabbing shrink-0"
       drag={!isMobile}
       dragSnapToOrigin={true}
