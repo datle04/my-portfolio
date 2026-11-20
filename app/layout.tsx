@@ -3,6 +3,7 @@ import { VT323, Inter, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/custom-cursor";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const vt323 = VT323({ 
   weight: "400", 
@@ -33,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleTagManager gtmId="GTM-5LN25LXS" />  
+      </head>
      <body className={`${vt323.variable} ${inter.variable} ${handwriting.variable} antialiased scrollbar-hide`}>
         <SpeedInsights/>
         <CustomCursor/>
